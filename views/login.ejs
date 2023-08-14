@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login_Form</title>
+
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/todo_data_form.css">
+    <style>
+        html::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #result {
+            display: flex;
+            flex-wrap: wrap;
+            color: aliceblue;
+            margin-top: 900px;
+            width: 100%;
+
+        }
+
+        #div {
+            /* border: 2px solid white; */
+            background-color: rgba(255, 255, 255, 0.13);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            margin: 10px;
+            padding: 10px;
+            justify-items: center;
+
+        }
+
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+        .form-box {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            /* border: 2px solid white; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form-box .round1,
+        .form-box .round2 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border-radius: 50%;
+            z-index: -2;
+
+        }
+
+        .round1 {
+            background: linear-gradient(#1845ab, #23a2f6);
+            left: -18%;
+            top: -24%;
+
+        }
+
+        .round2 {
+            background: linear-gradient(to right, #ff512f, #f09819);
+            right: -80px;
+            bottom: -120px;
+        }
+
+        table {
+            height: 580px;
+            width: 450px;
+            background-color: rgba(255, 255, 255, 0.13);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blue(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            z-index: -1;
+        }
+
+        table * {
+            font-family: sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        table h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+
+
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+        }
+
+        input {
+            display: block;
+            color: white;
+            height: 50px;
+            width: 100%;
+            border: 0;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+
+        }
+
+        table input::placeholder {
+            color: #e5e5e5;
+        }
+
+        table #name::placeholder {
+            color: white;
+        }
+
+        #button {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #button:hover {
+            background: linear-gradient(160deg, #14ffe9, #ffeb3b, #ff00e0);
+        }
+
+        a {
+            font-size: 15px;
+            text-decoration: none;
+            padding: 10px;
+
+        }
+
+        a:hover {
+            color: #ff512f;
+        }
+
+        .btn-soc {
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .btn-soc div {
+            background: red;
+            width: 150px;
+            border-radius: 3px;
+            padding: 5px 10px 10px 5px;
+            background-color: rgba(255, 255, 255, 0.27);
+            color: #eaf0fb;
+            text-align: center;
+
+        }
+
+        .btn-soc div:hover {
+            background-color: rgba(255, 255, 255, 0.47);
+        }
+
+        .btn-soc .fb {
+            margin-left: 25px;
+        }
+
+        .btn-soc i {
+            margin-right: 4px;
+            line-height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-box">
+        <div class="round1"></div>
+        <div class="round2"></div>
+        <table>
+            <h3 style="color:white; text-align: center; font-size: 30px; margin-bottom: 100px;">Login Page</h3>
+
+            <form action="/user/logindata" method="post">
+                <label for="">User/Email:</label>
+                <input type="email" name="email" placeholder="Email">
+                <label for="">Password:</label>
+                <input type="password" name="password" placeholder="Password"><br>
+                <a href="http://localhost:8000/user/" style="color:white; background-color:#23a2f6; padding: 10px 20px; border-radius: 5px;">Register</a>
+                <a href="register.ejs" style="color:white;margin-left: 190px; padding: 10px 20px; border-radius: 5px;">Forgot password?</a>
+                <input type="submit" value="Submit" id="" style="margin-top: 20px; color:white">
+            </form>
+
+
+
+        </table>
+
+    </div>

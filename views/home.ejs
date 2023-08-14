@@ -1,0 +1,43 @@
+<%-include('header')%>
+
+  <form action="/user/dataenter" enctype="multipart/form-data" method="post">
+    <fieldset>
+      <center>
+        <legend>Blog Admin Panel</legend>
+      </center>
+      <div style="width: 100%; display: flex; flex-wrap: wrap; border: 1px solid #0F4C81;">
+
+        <div style="width: 98%; margin-left: 10px; margin-top: 10px;">
+          Image:-
+          <input type="file" name="img">
+        </div>
+
+        <div style="width: 98%; margin-left: 10px; margin-top: 10px;">
+          Title:-
+          <input type="text" name="title">
+        </div>
+
+        <div style="width: 97%; margin-left: 10px; margin-top: 10px;">
+          Name:-
+          <input type="text" name="name">
+        </div>
+
+        <div style="width: 97.5%; margin-left: 10px; margin-top: 10px;">
+          Date:-
+          <input type="date" name="date">
+        </div>
+
+        <div style="width: 98%; margin-left: 10px; margin-top: 10px;">
+          Text:-
+          <input type="text" name="text">
+        </div>
+        <div style="width: 100%;"><br>
+          <center>
+            <input type="submit" value="Submit" style="width: 100px; background-color: #0F4C81; border: 0; padding: 10px 15px; color: white; font-size: 20px; border-radius: 5px;">
+          </center>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+<%-include('footer')%>

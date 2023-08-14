@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Update</title>
+    <style>
+        table,
+        td {
+            border: 2px solid black;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        tr {
+            margin-right: 10px;
+
+        }
+
+        input {
+            width: 98%;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="justify-content: center; display: flex;">
+        <form method="post" action="/user/update/<%=sos.id%>">
+            <table>
+                <tr>
+                    <div style="width: 100%; display: flex; flex-wrap: wrap; border: 1px solid #0F4C81;">
+                
+                        <div style="width: 98%; margin-left: 10px; margin-top: 10px;">
+                          Title:-
+                          <input type="text" name="title" value="<%=sos.title%>">
+                        </div>
+                
+                        <div style="width: 97%; margin-left: 10px; margin-top: 10px;">
+                          Name:-
+                          <input type="text" name="name" value="<%=sos.name%>">
+                        </div>
+                
+                        <div style="width: 97.5%; margin-left: 10px; margin-top: 10px;">
+                          Date:-
+                          <input type="date" name="date" value="<%=sos.date%>">
+                        </div>
+                
+                        <div style="width: 98%; margin-left: 10px; margin-top: 10px;">
+                          Text:-
+                          <input type="text" name="text" value="<%=sos.text%>">
+                        </div>
+                </tr>    
+                <center>
+              <input type="submit" value="Submit" style="padding: 5px; margin-top: 10px; font-size: 15px; background-color: #0F4C81; color: white;">
+            </center>
+        </form>
+    </div>
+</body>
+
+</html>
